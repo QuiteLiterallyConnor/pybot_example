@@ -6,8 +6,6 @@ from discord.ext import commands
 from dotenv import load_dotenv
 from datetime import datetime, timedelta
 
-load_dotenv()
-
 class XPBot(commands.Cog):
 
     BASE_XP_PER_MESSAGE = 50
@@ -115,6 +113,7 @@ class XPBot(commands.Cog):
 
 
 if __name__ == "__main__":
+    load_dotenv()
     TOKEN = os.getenv('DISCORD_TOKEN')
 
     if TOKEN is None:
